@@ -46,16 +46,40 @@ contactForm.addEventListener('submit', async e => {
   e.preventDefault();
   submitBtn.disabled = true;
   btnText.textContent = 'Enviando…';
-  await new Promise(r => setTimeout(r, 1400));
-  submitBtn.disabled = false;
-  btnText.textContent = '¡Enviado! ✓';
-  feedback.textContent = '✅ Gracias, te respondemos en menos de 24 h.';
-  feedback.className = 'form-feedback success';
-  contactForm.reset();
-  setTimeout(() => {
+
+  try {
+    const res = await fetch('https://amaia-bot-production.up.railway.app/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    document.getElementById('f-name').value,
+        email:   document.getElementById('f-email').value,
+        service: document.getElementById('f-service').value,
+        message: document.getElementById('f-message').value
+      })
+    });
+
+    const data = await res.json();
+
+    if (data.ok) {
+      btnText.textContent = '¡Enviado! ✓';
+      feedback.textContent = '✅ Gracias, te respondemos en menos de 24 h.';
+      feedback.className = 'form-feedback success';
+      contactForm.reset();
+    } else {
+      throw new Error('Error del servidor');
+    }
+  } catch (err) {
     btnText.textContent = 'Enviar mensaje →';
-    feedback.className = 'form-feedback hidden';
-  }, 5000);
+    feedback.textContent = '❌ Algo salió mal. Inténtalo de nuevo.';
+    feedback.className = 'form-feedback error';
+  } finally {
+    submitBtn.disabled = false;
+    setTimeout(() => {
+      btnText.textContent = 'Enviar mensaje →';
+      feedback.className = 'form-feedback hidden';
+    }, 5000);
+  }
 });
 
 // ── CHAT WIDGET ───────────────────────────────
