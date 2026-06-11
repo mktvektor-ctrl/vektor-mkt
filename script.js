@@ -189,7 +189,7 @@ SOBRE VEKTOR MKT:
 - Marketing: SEO, redes sociales, Meta Ads, Google Ads, email marketing, funnels
 - Proceso: Diagnóstico → Propuesta → Ejecución ágil → Lanzamiento + soporte
 - Ventajas: velocidad, resultados medibles, tecnología de vanguardia, comunicación directa
-- Contacto: contacto@vektormkt.com | Web: www.vektormkt.com | Lun–Vie 9-20h
+- Contacto: contacto@vektormkt.es | Web: www.vektormkt.es | Lun–Vie 9-20h
 - Soporte IA: 24/7
 
 PRECIOS ORIENTATIVOS:
@@ -217,11 +217,11 @@ async function callVektorAI(history) {
       appendMsg('bot', reply);
       chatHistory.push({ role: 'assistant', content: reply });
     } else {
-      appendMsg('bot', 'Lo siento, algo salió mal. Escríbenos a **contacto@vektormkt.com** 🙏');
+      appendMsg('bot', 'Lo siento, algo salió mal. Escríbenos a **contacto@vektormkt.es** 🙏');
     }
   } catch (err) {
     hideTyping();
-    appendMsg('bot', 'Error de conexión. Contáctanos en **contacto@vektormkt.com** 📧');
+    appendMsg('bot', 'Error de conexión. Contáctanos en **contacto@vektormkt.es** 📧');
     console.error(err);
   }
 }
