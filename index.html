@@ -1,433 +1,808 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Principal -->
-  <title>Vektor MKT | Agencia Digital · Webs, Agentes IA y Marketing en España</title>
-  <meta name="description" content="Vektor MKT es tu agencia de soluciones digitales en España. Diseñamos páginas web profesionales, creamos agentes de IA con tecnología avanzada e impulsamos tu negocio con estrategias de marketing digital." />
-  <meta name="keywords" content="agencia digital, páginas web, agentes de inteligencia artificial, marketing digital, chatbots IA, diseño web España, posicionamiento SEO, Meta Ads, Google Ads, automatización IA" />
-  <meta name="author" content="Vektor MKT" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://vektormkt.es/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vektormkt.es/" />
-  <meta property="og:title" content="Vektor MKT | Agencia Digital · Webs, Agentes IA y Marketing" />
-  <meta property="og:description" content="Diseñamos webs, creamos agentes de IA y ejecutamos estrategias de marketing que convierten visitas en clientes reales. +50 proyectos, 98% satisfacción." />
-  <meta property="og:image" content="https://vektormkt.es/img/og-image.png" />
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:site_name" content="Vektor MKT" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vektor MKT | Agencia Digital · Webs, Agentes IA y Marketing" />
-  <meta name="twitter:description" content="Diseñamos webs, creamos agentes de IA y ejecutamos estrategias de marketing que convierten visitas en clientes reales." />
-  <meta name="twitter:image" content="https://vektormkt.es/img/og-image.png" />
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Vektor MKT",
-    "url": "https://vektormkt.es",
-    "logo": "https://vektormkt.es/img/logo.png",
-    "description": "Agencia de soluciones digitales especializada en diseño web, agentes de inteligencia artificial y marketing digital.",
-    "email": "contacto@vektormkt.es",
-    "openingHours": "Mo-Fr 09:00-20:00",
-    "areaServed": "ES",
-    "serviceType": ["Diseño Web", "Agentes de IA", "Marketing Digital"]
-  }
-  </script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/icono.png" />
-  <link rel="apple-touch-icon" href="img/icono.png" />
-
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Vektor MKT | Inteligencia Artificial y Automatización Empresarial</title>
+<meta name="description" content="Vektor MKT transforma empresas con IA, automatización de procesos y agentes inteligentes. Tu socio tecnológico para la transformación digital."/>
+<meta name="keywords" content="inteligencia artificial empresarial, automatización procesos, agentes IA, transformación digital, ERP, España"/>
+<meta name="author" content="Vektor MKT"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://vektormkt.es/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://vektormkt.es/"/>
+<meta property="og:title" content="Vektor MKT | IA y Automatización Empresarial"/>
+<meta property="og:description" content="Transformamos empresas con inteligencia artificial, automatización de procesos y agentes inteligentes."/>
+<meta property="og:image" content="https://vektormkt.es/img/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Vektor MKT","url":"https://vektormkt.es","description":"Empresa especializada en inteligencia artificial empresarial y automatización de procesos.","email":"contacto@vektormkt.es","areaServed":"ES"}</script>
+<link rel="icon" type="image/png" href="img/icono.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#hero" class="nav-logo">
-        <img src="img/logo_sf.png" alt="footer" style="width: 80px;">
-        
-      </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#servicios" class="nav-link">Servicios</a>
-        <a href="#proyectos" class="nav-link">Proyectos</a>
-        <a href="#nosotros" class="nav-link">Nosotros</a>
-        <a href="#contacto" class="btn-cta">Hablemos →</a>
-      </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<!-- MOUSE GLOW -->
+<div id="mouse-glow"></div>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="img/fondo.png"
-           alt="" class="hero-bg-img" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-orb orb-blue"></div>
-    <div class="hero-orb orb-pink"></div>
-    <div class="container hero-content">
+<!-- ==================== NAV ==================== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="img/logo_sf.png" alt="Vektor MKT"/>
+      <span class="nav-logo-sub">DIGITAL SOLUTIONS</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active">Inicio</a></li>
+      <li><a href="#servicios" class="nav-link">Servicios</a></li>
+      <li><a href="#amaia" class="nav-link">AmaIA</a></li>
+      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <li><a href="#casos" class="nav-link">Casos de uso</a></li>
+      <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+      <li><a href="#blog" class="nav-link">Blog</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      <li><a href="#contacto" class="btn-nav">Solicitar demostración →</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid-lines"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
       <div class="hero-badge">
-        <span class="badge-pulse"></span>
-        Digital Solutions Agency
+        <span class="badge-dot"></span>
+        INTELIGENCIA ARTIFICIAL PARA EMPRESAS
       </div>
-      <h1 class="hero-title">
-        Tu negocio merece<br />
-        <span class="gradient-text">el mejor futuro digital</span>
+      <h1 class="hero-h1">
+        La Inteligencia Artificial<br/>
+        que <span class="grad-text">transforma empresas</span>
       </h1>
       <p class="hero-sub">
-        Diseñamos webs, creamos agentes de IA y ejecutamos estrategias de marketing que convierten visitas en clientes reales.
+        Diseñamos agentes inteligentes, automatizamos procesos empresariales y desarrollamos plataformas que ahorran tiempo, reducen costes y aumentan la productividad.
       </p>
-      <div class="hero-actions">
-        <a href="#contacto" class="btn-primary">Comienza tu proyecto <span>→</span></a>
-        <a href="#servicios" class="btn-outline">Ver servicios</a>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-primary">Solicitar demostración →</a>
+        <a href="#amaia" class="btn-ghost">
+          Conocer AmaIA
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        </a>
       </div>
       <div class="hero-stats">
-        <div class="hstat"><span class="hstat-n gradient-text">50+</span><span class="hstat-l">Proyectos</span></div>
+        <div class="hstat">
+          <span class="hstat-n" data-count="950" data-suffix="+">0+</span>
+          <span class="hstat-l">Proyectos</span>
+        </div>
         <div class="hstat-sep"></div>
-        <div class="hstat"><span class="hstat-n gradient-text">98%</span><span class="hstat-l">Satisfacción</span></div>
+        <div class="hstat">
+          <span class="hstat-n" data-count="98" data-suffix="%">0%</span>
+          <span class="hstat-l">Satisfacción</span>
+        </div>
         <div class="hstat-sep"></div>
-        <div class="hstat"><span class="hstat-n gradient-text">24/7</span><span class="hstat-l">Soporte IA</span></div>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span></span>
-    </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section class="section" id="servicios">
-    <div class="container">
-      <div class="sec-header" data-aos>
-        <span class="sec-tag">Nuestros Servicios</span>
-        <h2>Soluciones que <span class="gradient-text">impulsan resultados</span></h2>
-        <p>Todo lo que necesitas para dominar el entorno digital, en un solo lugar.</p>
-      </div>
-      <div class="svc-grid">
-
-        <div class="svc-card" data-aos data-delay="0">
-          <div class="svc-img">
-            <img src="img/pagweb.png" alt="Páginas Web" />
-            <div class="svc-img-overlay"></div>
-            <div class="svc-badge">🌐</div>
-          </div>
-          <div class="svc-body">
-            <h3>Páginas Web</h3>
-            <p>Sitios modernos, rápidos y optimizados para convertir visitantes en clientes. Responsive, SEO-ready y a medida.</p>
-            <ul class="svc-list">
-              <li>Landing pages de alta conversión</li>
-              <li>E-commerce & tiendas online</li>
-              <li>Portales corporativos</li>
-            </ul>
-            <a href="#contacto" class="svc-link">Solicitar proyecto →</a>
-          </div>
+        <div class="hstat">
+          <span class="hstat-n">24/7</span>
+          <span class="hstat-l">Soporte IA</span>
         </div>
-
-        <div class="svc-card featured" data-aos data-delay="150">
-          <div class="featured-pill">Más popular</div>
-          <div class="svc-img">
-            <img src="img/agente.png" alt="Agentes IA" />
-            <div class="svc-img-overlay"></div>
-            <div class="svc-badge">🤖</div>
-          </div>
-          <div class="svc-body">
-            <h3>Agentes de IA</h3>
-            <p>Automatiza tu negocio con inteligencia artificial. Chatbots y agentes que trabajan 24/7 para tus clientes.</p>
-            <ul class="svc-list">
-              <li>Chatbots con IA generativa</li>
-              <li>Integración WhatsApp / Web</li>
-              <li>Automatización de procesos</li>
-            </ul>
-            <a href="#contacto" class="svc-link">Solicitar proyecto →</a>
-          </div>
-        </div>
-
-        <div class="svc-card" data-aos data-delay="300">
-          <div class="svc-img">
-            <img src="img/marketingdig.png" alt="Marketing Digital" />
-            <div class="svc-img-overlay"></div>
-            <div class="svc-badge">📈</div>
-          </div>
-          <div class="svc-body">
-            <h3>Marketing Digital</h3>
-            <p>Estrategias basadas en datos que aumentan tu visibilidad y maximizan tu retorno de inversión.</p>
-            <ul class="svc-list">
-              <li>SEO & posicionamiento</li>
-              <li>Meta Ads & Google Ads</li>
-              <li>Gestión de redes sociales</li>
-            </ul>
-            <a href="#contacto" class="svc-link">Solicitar proyecto →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- NOSOTROS -->
-  <section class="section" id="nosotros">
-    <div class="container about-grid">
-      <div class="about-img-col" data-aos>
-        <img src="img/nosotros.png"
-             alt="Equipo Vektor MKT" class="about-img" />
-        
-      </div>
-      <div class="about-text-col" data-aos data-delay="100">
-        <span class="sec-tag">Sobre nosotros</span>
-        <h2>Tu aliado en <span class="gradient-text">transformación digital</span></h2>
-        <p class="about-p">
-          En Vektor MKT combinamos creatividad, tecnología de vanguardia e inteligencia artificial
-          para crear soluciones que no solo se ven increíbles, sino que generan resultados reales y medibles.
-        </p>
-        <div class="values">
-          <div class="val">
-            <div class="val-icon gradient-bg">⚡</div>
-            <div><strong>Innovación</strong><p>Siempre a la vanguardia tecnológica</p></div>
-          </div>
-          <div class="val">
-            <div class="val-icon gradient-bg">🎯</div>
-            <div><strong>Resultados</strong><p>Métricas reales: tráfico, leads y ventas</p></div>
-          </div>
-          <div class="val">
-            <div class="val-icon gradient-bg">🤝</div>
-            <div><strong>Cercanía</strong><p>Comunicación directa, sin intermediarios</p></div>
-          </div>
-        </div>
-        <a href="#contacto" class="btn-primary" style="margin-top:2rem;display:inline-flex;">Trabaja con nosotros →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="section section-dark" id="proceso">
-    <div class="container">
-      <div class="sec-header" data-aos>
-        <span class="sec-tag">Cómo trabajamos</span>
-        <h2>Proceso <span class="gradient-text">sin complicaciones</span></h2>
-      </div>
-      <div class="steps-row">
-        <div class="step-item" data-aos data-delay="0">
-          <div class="step-num gradient-text">01</div>
-          <h4>Diagnóstico</h4>
-          <p>Analizamos tu negocio, competencia y objetivos para diseñar la estrategia ideal.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-item" data-aos data-delay="100">
-          <div class="step-num gradient-text">02</div>
-          <h4>Propuesta</h4>
-          <p>Solución personalizada con plazos claros, tecnología elegida y presupuesto transparente.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-item" data-aos data-delay="200">
-          <div class="step-num gradient-text">03</div>
-          <h4>Ejecución</h4>
-          <p>Desarrollo ágil con actualizaciones en tiempo real para que siempre sepas el estado.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-item" data-aos data-delay="300">
-          <div class="step-num gradient-text">04</div>
-          <h4>Lanzamiento</h4>
-          <p>Entregamos, optimizamos y te acompañamos con soporte continuo post-lanzamiento.</p>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-count="100" data-suffix="%">0%</span>
+          <span class="hstat-l">Comprometidos</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section class="section" id="proyectos">
-    <div class="container">
-      <div class="sec-header" data-aos>
-        <span class="sec-tag">Proyectos</span>
-        <h2>Soluciones <span class="gradient-text">que ya funcionan</span></h2>
-        <p>Casos reales construidos con tecnología de vanguardia. Esto es lo que hacemos.</p>
-      </div>
-      <div class="projects-grid">
-
-        <div class="project-card glass-card" data-aos data-delay="0">
-          <div class="project-img">
-            <img src="img/marketingdig.png" alt="Plataforma de reclamaciones online Vektor MKT" />
-            <div class="project-overlay">
-              <a href="https://reclamaciones.vektormkt.es" target="_blank" rel="noopener" class="project-btn">Ver proyecto →</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="ptag">Web App</span>
-              <span class="ptag">IA</span>
-            </div>
-            <h3>Plataforma de Reclamaciones</h3>
-            <p>Sistema web inteligente para gestión y presentación de reclamaciones. Automatización del proceso completo con asistencia de IA.</p>
-            <a href="https://reclamaciones.vektormkt.es" target="_blank" rel="noopener" class="svc-link">reclamaciones.vektormkt.es →</a>
-          </div>
+    <div class="hero-right">
+      <div class="hero-visual">
+        <!-- Glowing brain/AI visual built with CSS+SVG -->
+        <div class="hero-orb hero-orb-main"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <svg class="hero-neural" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id="neural-anim"></svg>
+        <!-- Floating data cards -->
+        <div class="float-card fc1">
+          <div class="fc-dot fc-dot-green"></div>
+          <span>IA Procesando</span>
+          <strong>+847 tareas/día</strong>
         </div>
-
-        <div class="project-card glass-card" data-aos data-delay="150">
-          <div class="project-img">
-            <img src="img/pagweb.png" alt="Plataforma de fichajes deportivos - próximamente" />
-            <div class="project-overlay coming">
-              <span class="coming-badge">Próximamente</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="ptag">Web App</span>
-              <span class="ptag">RRHH</span>
-            </div>
-            <h3>Control Horario</h3>
-            <p>Plataforma web para la gestión y seguimiento del control horario de empleados. Cumplimiento legal y automatización del registro de jornada.</p>
-            <span class="svc-link muted">En desarrollo...</span>
-          </div>
+        <div class="float-card fc2">
+          <div class="fc-dot fc-dot-cyan"></div>
+          <span>Ahorro de tiempo</span>
+          <strong>80% reducción</strong>
         </div>
-
-        <div class="project-card glass-card project-cta" data-aos data-delay="300">
-          <div class="project-cta-inner">
-            <div class="project-cta-icon gradient-text">+</div>
-            <h3>¿Tu proyecto aquí?</h3>
-            <p>Cuéntanos tu idea y lo construimos juntos.</p>
-            <a href="#contacto" class="btn-primary" style="margin-top:1.5rem;">Hablemos →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BANNER -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-box" data-aos>
-        <div class="cta-orb"></div>
-        <h2>¿Listo para llevar tu negocio<br /><span class="gradient-text">al siguiente nivel?</span></h2>
-        <p>Cuéntanos tu proyecto y te respondemos en menos de 24 horas.</p>
-        <a href="#contacto" class="btn-primary large">Hablemos ahora →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <div class="container contact-grid">
-      <div class="contact-left" data-aos>
-        <span class="sec-tag">Contacto</span>
-        <h2>¿Listo para <span class="gradient-text">despegar?</span></h2>
-        <p class="about-p">Cuéntanos sobre tu proyecto. Sin compromiso, respondemos en menos de 24 horas.</p>
-        <div class="cinfo-list">
-          <div class="cinfo-item">
-            <div class="cinfo-icon gradient-bg">✉️</div>
-            <div><strong>Email</strong><span>contacto@vektormkt.es</span></div>
-          </div>
-          <div class="cinfo-item">
-            <div class="cinfo-icon gradient-bg">💬</div>
-            <div><strong>Chat IA</strong><span>Disponible 24/7 →</span></div>
-          </div>
-          <div class="cinfo-item">
-            <div class="cinfo-icon gradient-bg">🕐</div>
-            <div><strong>Horario</strong><span>Lun–Vie 9:00–20:00</span></div>
-          </div>
+        <div class="float-card fc3">
+          <div class="fc-dot fc-dot-purple"></div>
+          <span>Disponibilidad</span>
+          <strong>24/7 online</strong>
         </div>
       </div>
-      <form class="contact-form glass-card" id="contact-form" data-aos data-delay="100">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Nombre</label>
-            <input type="text" id="f-name" placeholder="Tu nombre" required />
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" id="f-email" placeholder="tu@email.com" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Servicio de interés</label>
-          <select id="f-service">
-            <option value="">Selecciona...</option>
-            <option>Página Web</option>
-            <option>Agente de IA</option>
-            <option>Marketing Digital</option>
-            <option>Pack completo</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Tu proyecto</label>
-          <textarea id="f-message" rows="4" placeholder="Cuéntanos sobre tu empresa y lo que necesitas..." required></textarea>
-        </div>
-        <button type="submit" class="btn-primary full" id="submit-btn">
-          <span id="btn-text">Enviar mensaje →</span>
-        </button>
-        <p id="form-feedback" class="form-feedback hidden"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <img src="img/logo_sf.png" alt="footer" style="width: 150px;">
-      <div class="footer-links">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://reclamaciones.vektormkt.es" target="_blank">Reclamaciones</a>
-      </div>
-      <p class="footer-copy">© <span id="year"></span> Vektor MKT. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- CHAT WIDGET -->
-  <button class="chat-toggle" id="chat-toggle" aria-label="Abrir chat">
-    <span class="chat-toggle-icon">💬</span>
-    <span class="chat-toggle-pulse"></span>
-  </button>
-
-  <div class="chat-window glass-card" id="chat-window">
-    <div class="chat-header gradient-bg">
-      <div class="chat-hinfo">
-        <div class="chat-avatar">aI</div>
-        <div>
-          <strong>amaIA</strong>
-          <small><span class="online-dot"></span> En línea</small>
-        </div>
-      </div>
-      <button class="chat-close" id="chat-close">✕</button>
-    </div>
-    <div class="chat-messages" id="chat-messages">
-      <div class="chat-date-sep">Hoy</div>
-      <div class="msg msg-bot">
-        <div class="msg-av gradient-bg">Am</div>
-        <div class="msg-bubble">👋 ¡Hola! Soy <strong>amaIA</strong>, el asistente de Vektor MKT. ¿En qué puedo ayudarte?</div>
-      </div>
-      <div class="quick-chips" id="quick-chips">
-        <button class="chip" data-q="¿Qué servicios ofrecéis?">Servicios</button>
-        <button class="chip" data-q="¿Cuánto cuesta una web?">Precios</button>
-        <button class="chip" data-q="¿Qué es un agente de IA?">Agentes IA</button>
-        <button class="chip" data-q="Quiero empezar un proyecto">Mi proyecto</button>
-      </div>
-    </div>
-    <div class="chat-input-row">
-      <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." />
-      <button id="chat-send" class="chat-send gradient-bg">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="hero-scroll">
+    <span class="scroll-line"></span>
+  </div>
+</section>
+
+<!-- ==================== SERVICIOS ==================== -->
+<section id="servicios" class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">¿QUÉ HACEMOS?</span>
+      <h2 class="sec-h2">Soluciones <span class="grad-text">inteligentes</span> para empresas modernas</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <circle cx="20" cy="20" r="18" stroke="#06b6d4" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="6" fill="#06b6d4" opacity=".3"/>
+            <line x1="20" y1="2" x2="20" y2="8" stroke="#06b6d4" stroke-width="1.5"/>
+            <line x1="20" y1="32" x2="20" y2="38" stroke="#06b6d4" stroke-width="1.5"/>
+            <line x1="2" y1="20" x2="8" y2="20" stroke="#06b6d4" stroke-width="1.5"/>
+            <line x1="32" y1="20" x2="38" y2="20" stroke="#06b6d4" stroke-width="1.5"/>
+            <line x1="6" y1="6" x2="10" y2="10" stroke="#8b5cf6" stroke-width="1.5"/>
+            <line x1="30" y1="30" x2="34" y2="34" stroke="#8b5cf6" stroke-width="1.5"/>
+            <line x1="34" y1="6" x2="30" y2="10" stroke="#8b5cf6" stroke-width="1.5"/>
+            <line x1="10" y1="30" x2="6" y2="34" stroke="#8b5cf6" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Inteligencia Artificial Empresarial</h3>
+        <p>Creamos agentes inteligentes que entienden, aprenden y asisten a tus equipos 24/7.</p>
+        <a href="#contacto" class="svc-link">Saber más →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <rect x="4" y="4" width="14" height="14" rx="3" stroke="#8b5cf6" stroke-width="1.5"/>
+            <rect x="22" y="4" width="14" height="14" rx="3" stroke="#ec4899" stroke-width="1.5"/>
+            <rect x="4" y="22" width="14" height="14" rx="3" stroke="#06b6d4" stroke-width="1.5"/>
+            <rect x="22" y="22" width="14" height="14" rx="3" stroke="#8b5cf6" stroke-width="1.5"/>
+            <line x1="18" y1="11" x2="22" y2="11" stroke="#ec4899" stroke-width="1.5" stroke-dasharray="2,1"/>
+            <line x1="29" y1="18" x2="29" y2="22" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="2,1"/>
+          </svg>
+        </div>
+        <h3>Automatización de Procesos</h3>
+        <p>Automatizamos tareas repetitivas, integramos sistemas y eliminamos procesos manuales.</p>
+        <a href="#contacto" class="svc-link">Saber más →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <rect x="3" y="3" width="34" height="24" rx="3" stroke="#06b6d4" stroke-width="1.5"/>
+            <line x1="3" y1="10" x2="37" y2="10" stroke="#06b6d4" stroke-width="1" opacity=".5"/>
+            <rect x="7" y="14" width="8" height="9" rx="1" fill="#8b5cf6" opacity=".4"/>
+            <rect x="17" y="17" width="8" height="6" rx="1" fill="#06b6d4" opacity=".4"/>
+            <rect x="27" y="12" width="6" height="11" rx="1" fill="#ec4899" opacity=".4"/>
+            <line x1="14" y1="31" x2="26" y2="31" stroke="#06b6d4" stroke-width="1.5"/>
+            <line x1="20" y1="27" x2="20" y2="31" stroke="#06b6d4" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Plataformas Inteligentes</h3>
+        <p>Desarrollamos aplicaciones y dashboards que centralizan, analizan y visualizan tu negocio.</p>
+        <a href="#contacto" class="svc-link">Saber más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AMAIA ==================== -->
+<section id="amaia" class="sec sec-dark">
+  <div class="container">
+    <div class="amaia-grid">
+      <div class="amaia-left reveal">
+        <span class="sec-tag">CONOCE A TU ASISTENTE INTELIGENTE</span>
+        <div class="amaia-logo-header">
+          <img src="img/proyectos/amaia-logo.png" alt="AmaIA" class="amaia-header-logo"/>
+        </div>
+        <p class="amaia-sub">El asistente inteligente para empresas.</p>
+        <ul class="amaia-feats">
+          <li><span class="af-check">✓</span> Entiende documentos y bases de datos</li>
+          <li><span class="af-check">✓</span> Responde preguntas en lenguaje natural</li>
+          <li><span class="af-check">✓</span> Genera informes y análisis al instante</li>
+          <li><span class="af-check">✓</span> Automatiza procesos y tareas repetitivas</li>
+          <li><span class="af-check">✓</span> Integración con tus herramientas favoritas</li>
+          <li><span class="af-check">✓</span> Disponible 24/7 en todos tus canales</li>
+          <li><span class="af-check wapp">✓</span> Funciona en <strong>WhatsApp</strong> y <strong>Telegram</strong></li>
+        </ul>
+        <div class="amaia-channels">
+          <div class="amaia-channel">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </div>
+          <div class="amaia-channel">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:#2aabee"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </div>
+          <div class="amaia-channel">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#06b6d4"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Web Chat
+          </div>
+          <div class="amaia-channel">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:#7b83eb"><path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572V19.2a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66A1.5 1.5 0 008.25 15.45V5.251a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.121z"/></svg>
+            Teams / ERP
+          </div>
+        </div>
+        <a href="#contacto" class="btn-primary" style="margin-top:2rem;display:inline-flex;">Ver demostración en vivo →</a>
+      </div>
+      <div class="amaia-right reveal">
+        <div class="amaia-mockup">
+          <!-- Chat sidebar -->
+          <div class="amaia-sidebar">
+            <div class="am-sidebar-header">
+              <div class="am-avatar">
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#06b6d4" stroke-width="1.5"/><circle cx="20" cy="15" r="6" fill="#06b6d4" opacity=".5"/><path d="M8 35c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#06b6d4" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <div class="am-name">AmaIA <span class="am-online">● En línea</span></div>
+              </div>
+            </div>
+            <div class="am-sidebar-actions">
+              <div class="am-action am-action-active">+ Nuevo chat</div>
+              <div class="am-action">💬 Conversaciones</div>
+              <div class="am-action">📄 Documentos</div>
+              <div class="am-action">📊 Informes</div>
+              <div class="am-action">⚙️ Ajustes</div>
+            </div>
+          </div>
+          <!-- Chat main -->
+          <div class="amaia-chat">
+            <div class="ac-question">¿Cuáles fueron las ventas del último trimestre por región?</div>
+            <div class="ac-response">
+              <div class="ac-resp-header">
+                <div class="ac-av" style="background:transparent;padding:1px;"><img src="img/proyectos/amaia-logo.png" alt="AmaIA" style="width:22px;height:22px;object-fit:contain;border-radius:50%;"/></div>
+                <span>AmaIA · Ahora mismo</span>
+              </div>
+              <p class="ac-text">Aquí tienes el resumen de ventas del último trimestre agrupado por región:</p>
+              <table class="ac-table">
+                <thead><tr><th>Región</th><th>Ventas</th><th>Variación</th></tr></thead>
+                <tbody>
+                  <tr><td>Europa</td><td>1.250.000 €</td><td class="pos">+18.4%</td></tr>
+                  <tr><td>América</td><td>980.000 €</td><td class="pos">+12.7%</td></tr>
+                  <tr><td>Asia</td><td>760.000 €</td><td class="pos">+24.1%</td></tr>
+                  <tr><td>África</td><td>310.000 €</td><td class="pos">+9.3%</td></tr>
+                </tbody>
+              </table>
+              <p class="ac-follow">¿Quieres que genere un gráfico con estos datos?</p>
+            </div>
+            <div class="ac-input-row">
+              <input type="text" placeholder="Escribe tu mensaje..." class="ac-input" readonly/>
+              <button class="ac-send">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AUTOMATIZACIÓN ==================== -->
+<section id="automatizacion" class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">AUTOMATIZACIÓN DE PROCESOS</span>
+      <h2 class="sec-h2">De procesos manuales a <span class="grad-text">flujos</span> inteligentes</h2>
+    </div>
+    <div class="auto-flow reveal">
+      <div class="af-step">
+        <div class="af-icon">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><rect x="5" y="8" width="30" height="24" rx="3" stroke="#06b6d4" stroke-width="1.5"/><line x1="5" y1="15" x2="35" y2="15" stroke="#06b6d4" stroke-width="1" opacity=".4"/><rect x="9" y="19" width="7" height="9" rx="1" fill="#06b6d4" opacity=".3"/><rect x="18" y="22" width="7" height="6" rx="1" fill="#8b5cf6" opacity=".3"/></svg>
+        </div>
+        <div class="af-label">Datos y documentos</div>
+        <div class="af-sub">Emails, PDFs, Excel,<br/>formularios, ERPs…</div>
+      </div>
+      <div class="af-arrow">→</div>
+      <div class="af-step af-step-highlight">
+        <div class="af-icon">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="#8b5cf6" stroke-width="1.5"/><circle cx="20" cy="20" r="7" fill="#8b5cf6" opacity=".2"/><line x1="20" y1="5" x2="20" y2="10" stroke="#8b5cf6" stroke-width="1.5"/><line x1="20" y1="30" x2="20" y2="35" stroke="#8b5cf6" stroke-width="1.5"/><line x1="5" y1="20" x2="10" y2="20" stroke="#8b5cf6" stroke-width="1.5"/><line x1="30" y1="20" x2="35" y2="20" stroke="#8b5cf6" stroke-width="1.5"/></svg>
+        </div>
+        <div class="af-label">AmaIA interpreta</div>
+        <div class="af-sub">Lee, entiende y clasifica<br/>la información.</div>
+      </div>
+      <div class="af-arrow">→</div>
+      <div class="af-step">
+        <div class="af-icon">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#ec4899" stroke-width="1.5"/><path d="M14 20l4 4 8-8" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="af-label">Ejecuta acciones</div>
+        <div class="af-sub">Automatiza tareas en tus<br/>sistemas y herramientas.</div>
+      </div>
+      <div class="af-arrow">→</div>
+      <div class="af-step">
+        <div class="af-icon">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><rect x="5" y="5" width="30" height="30" rx="3" stroke="#06b6d4" stroke-width="1.5"/><line x1="13" y1="30" x2="13" y2="18" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/><line x1="21" y1="30" x2="21" y2="12" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round"/><line x1="29" y1="30" x2="29" y2="20" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="af-label">Resultados</div>
+        <div class="af-sub">Datos organizados, informes<br/>y decisiones inteligentes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CASOS DE USO ==================== -->
+<section id="casos" class="sec sec-dark">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">CASOS DE USO</span>
+      <h2 class="sec-h2">Aplicamos IA y automatización en <span class="grad-text">todas las áreas</span></h2>
+    </div>
+    <div class="casos-grid">
+      <div class="caso-item reveal" data-area="RRHH">
+        <div class="caso-icon">👥</div>
+        <div class="caso-label">RRHH</div>
+      </div>
+      <div class="caso-item reveal" data-area="Compras">
+        <div class="caso-icon">🛒</div>
+        <div class="caso-label">Compras</div>
+      </div>
+      <div class="caso-item reveal" data-area="Finanzas">
+        <div class="caso-icon">💰</div>
+        <div class="caso-label">Finanzas</div>
+      </div>
+      <div class="caso-item reveal" data-area="Producción">
+        <div class="caso-icon">🏭</div>
+        <div class="caso-label">Producción</div>
+      </div>
+      <div class="caso-item reveal" data-area="Almacén">
+        <div class="caso-icon">📦</div>
+        <div class="caso-label">Almacén</div>
+      </div>
+      <div class="caso-item reveal" data-area="Reclamaciones">
+        <div class="caso-icon">📋</div>
+        <div class="caso-label">Reclamaciones</div>
+      </div>
+      <div class="caso-item reveal" data-area="Atención al cliente">
+        <div class="caso-icon">💬</div>
+        <div class="caso-label">Atención al cliente</div>
+      </div>
+      <div class="caso-item reveal" data-area="Control horario">
+        <div class="caso-icon">🕐</div>
+        <div class="caso-label">Control horario</div>
+      </div>
+      <div class="caso-item reveal" data-area="SAP / ERP">
+        <div class="caso-icon">⚙️</div>
+        <div class="caso-label">SAP / ERP</div>
+      </div>
+      <div class="caso-item reveal" data-area="Más casos">
+        <div class="caso-icon">+</div>
+        <div class="caso-label">Más casos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROYECTOS ==================== -->
+<section id="proyectos" class="sec">
+  <div class="container">
+    <div class="sec-head reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <span class="sec-tag">PROYECTOS DESTACADOS</span>
+        <h2 class="sec-h2">Soluciones reales que <span class="grad-text">generan impacto</span></h2>
+      </div>
+      <a href="#contacto" class="proj-ver-todos">Ver todos los proyectos →</a>
+    </div>
+    <div class="proj-grid proj-grid-5">
+      <!-- AmaIA -->
+      <div class="proj-card reveal">
+        <div class="proj-logo-wrap">
+          <img src="img/proyectos/amaia-logo.png" alt="AmaIA" class="proj-logo-img"/>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags-row">
+            <span class="proj-status status-test">En pruebas</span>
+            <span class="ptag ptag-purple">IA Conversacional</span>
+          </div>
+          <h3>AmaIA</h3>
+          <p>Asistente inteligente empresarial. Entiende documentos, responde preguntas, automatiza tareas y opera 24/7 en WhatsApp, Telegram, Teams y web.</p>
+          <div class="proj-channels-mini">
+            <span class="pchan pchan-wa">WhatsApp</span>
+            <span class="pchan pchan-tg">Telegram</span>
+            <span class="pchan pchan-web">Web</span>
+          </div>
+          <span class="proj-link muted">En integración →</span>
+        </div>
+      </div>
+      <!-- AmaIA Almacén -->
+      <div class="proj-card reveal">
+        <div class="proj-logo-wrap">
+          <img src="img/proyectos/amaia-almacen-logo.png" alt="AmaIA Almacén" class="proj-logo-img"/>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags-row">
+            <span class="proj-status status-dev">En desarrollo</span>
+            <span class="ptag ptag-blue">Almacén · IA</span>
+          </div>
+          <h3>AmaIA Almacén</h3>
+          <p>Gestión inteligente de stock. Consultas en lenguaje natural, alertas automáticas de reposición y trazabilidad en tiempo real integrada con ERP.</p>
+          <span class="proj-link muted">Próximamente →</span>
+        </div>
+      </div>
+      <!-- FichajesPro -->
+      <div class="proj-card reveal">
+        <div class="proj-logo-wrap">
+          <img src="img/proyectos/fichajespro-logo.png" alt="FichajesPro" class="proj-logo-img"/>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags-row">
+            <span class="proj-status status-dev">En desarrollo</span>
+            <span class="ptag ptag-yellow">RRHH</span>
+          </div>
+          <h3>FichajesPro</h3>
+          <p>Control horario digital con biometría, gestión de turnos y cumplimiento legal automatizado. Reportes en tiempo real sin intervención manual.</p>
+          <span class="proj-link muted">Próximamente →</span>
+        </div>
+      </div>
+      <!-- TicketFlow -->
+      <div class="proj-card reveal">
+        <div class="proj-logo-wrap">
+          <img src="img/proyectos/ticketflow-logo.png" alt="TicketFlow" class="proj-logo-img"/>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags-row">
+            <span class="proj-status status-prod">En producción</span>
+            <span class="ptag ptag-purple">Reclamaciones</span>
+          </div>
+          <h3>TicketFlow</h3>
+          <p>Plataforma de gestión automatizada de reclamaciones e incidencias. Registro, clasificación y resolución con flujos inteligentes y asistencia IA.</p>
+          <a href="https://reclamaciones.vektormkt.es" target="_blank" class="proj-link">Ver en vivo →</a>
+        </div>
+      </div>
+      <!-- StorePilot -->
+      <div class="proj-card reveal">
+        <div class="proj-logo-wrap">
+          <img src="img/proyectos/storepilot-logo.png" alt="StorePilot" class="proj-logo-img"/>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags-row">
+            <span class="proj-status status-dev">En desarrollo</span>
+            <span class="ptag ptag-blue">Tiendas · IA</span>
+          </div>
+          <h3>StorePilot</h3>
+          <p>Asistente inteligente para gestión comercial. Automatiza la consulta de información de productos, stock y ventas para equipos de tienda.</p>
+          <span class="proj-link muted">Próximamente →</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-custom-banner reveal">
+      <div>
+        <h3>¿Tu proceso no está aquí?</h3>
+        <p>Siempre estamos dispuestos a crear nuevas soluciones a medida para tu empresa.</p>
+      </div>
+      <a href="#contacto" class="btn-primary">Cuéntanos tu caso →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TECNOLOGÍAS ==================== -->
+<section id="tecnologias" class="sec sec-dark">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">TECNOLOGÍAS QUE UTILIZAMOS</span>
+    </div>
+    <div class="tech-strip">
+      <div class="tech-item reveal"><div class="tech-logo tech-claude">✦ Claude</div></div>
+      <div class="tech-item reveal"><div class="tech-logo tech-openai">⬡ OpenAI</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">🐍</span>Python</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">🟢</span>Node.js</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">⚛️</span>React</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">🐘</span>PostgreSQL</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">🐳</span>Docker</div></div>
+      <div class="tech-item reveal"><div class="tech-logo tech-sap">SAP</div></div>
+      <div class="tech-item reveal"><div class="tech-logo tech-oracle">Oracle</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">☁️</span>Microsoft Azure</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">🖥️</span>VMware</div></div>
+      <div class="tech-item reveal"><div class="tech-logo tech-n8n">n8n</div></div>
+      <div class="tech-item reveal"><div class="tech-logo"><span class="tech-emoji">+</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STATS ==================== -->
+<section id="stats" class="sec stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-num" data-count="12450" data-suffix="+">0+</div>
+        <div class="stat-label">Horas ahorradas<br/>a nuestros clientes</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-icon">🔄</div>
+        <div class="stat-num" data-count="230" data-suffix="+">0+</div>
+        <div class="stat-label">Procesos automatizados<br/>con IA</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-num">35-70%</div>
+        <div class="stat-label">Reducción promedio<br/>de tiempos operativos</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-icon">🤖</div>
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Agentes inteligentes<br/>siempre disponibles</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-icon">📈</div>
+        <div class="stat-num" data-count="320" data-suffix="%">0%</div>
+        <div class="stat-label">ROI promedio en los<br/>primeros 6 meses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== METODOLOGÍA ==================== -->
+<section id="metodologia" class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">NUESTRA METODOLOGÍA</span>
+      <h2 class="sec-h2">Cómo lo hacemos <span class="grad-text">realidad</span></h2>
+    </div>
+    <div class="method-timeline">
+      <div class="mt-step reveal">
+        <div class="mt-num">1</div>
+        <div class="mt-content">
+          <h4>Analizamos</h4>
+          <p>Estudiamos tus procesos, sistemas actuales y necesidades reales de tu empresa.</p>
+        </div>
+      </div>
+      <div class="mt-step reveal">
+        <div class="mt-num">2</div>
+        <div class="mt-content">
+          <h4>Diseñamos</h4>
+          <p>Arquitectura de la solución adaptada exactamente a tu caso de uso.</p>
+        </div>
+      </div>
+      <div class="mt-step reveal">
+        <div class="mt-num">3</div>
+        <div class="mt-content">
+          <h4>Automatizamos</h4>
+          <p>Implementamos y conectamos todos los flujos y procesos definidos.</p>
+        </div>
+      </div>
+      <div class="mt-step reveal">
+        <div class="mt-num">4</div>
+        <div class="mt-content">
+          <h4>Integramos</h4>
+          <p>Conectamos con tus sistemas actuales sin disrupciones ni fricciones.</p>
+        </div>
+      </div>
+      <div class="mt-step reveal">
+        <div class="mt-num">5</div>
+        <div class="mt-content">
+          <h4>Mejoramos</h4>
+          <p>Optimización continua, soporte permanente y nuevas soluciones a medida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== POR QUÉ ==================== -->
+<section id="nosotros" class="sec sec-dark">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">¿POR QUÉ VEKTOR MKT?</span>
+      <h2 class="sec-h2">No solo desarrollamos software.<br/><span class="grad-text">Transformamos empresas.</span></h2>
+      <p class="sec-sub-text">Experiencia real en entornos industriales. Somos el socio tecnológico que tu empresa necesita para dar el salto a la automatización inteligente.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-num">15+</div>
+        <h4>Años de experiencia técnica</h4>
+        <p>Infraestructura, sistemas e integración en entornos de producción industrial real.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">IA</div>
+        <h4>Aplicada, no teórica</h4>
+        <p>IA donde duele: en planta, en procesos, en operaciones. Resultados medibles desde el primer mes.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">∞</div>
+        <h4>Siempre más soluciones</h4>
+        <p>Siempre dispuestos a crear nuevas soluciones a medida. Tu problema, nuestra solución.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA BANNER ==================== -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-orb cta-orb-1"></div>
+      <div class="cta-orb cta-orb-2"></div>
+      <h2>¿Listo para transformar<br/>tu empresa?</h2>
+      <p>Hablemos de tu proyecto y descubre cómo la IA y la automatización pueden llevar tu negocio al siguiente nivel.</p>
+      <div class="cta-btns">
+        <a href="#contacto" class="btn-primary">Solicitar demostración →</a>
+        <a href="#contacto" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Agendar reunión
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOG ==================== -->
+<section id="blog" class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-tag">BLOG</span>
+      <h2 class="sec-h2">Recursos sobre <span class="grad-text">IA y Automatización</span></h2>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-cat">IA Empresarial</div>
+        <h4>Cómo los agentes de IA están transformando la industria manufacturera en 2025</h4>
+        <p>Descubre los casos de uso más impactantes de la inteligencia artificial en entornos industriales.</p>
+        <a href="#" class="blog-link">Leer más →</a>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-cat">Automatización</div>
+        <h4>SAP + IA: Cómo automatizar los procesos manuales que frenan tu ERP</h4>
+        <p>Guía práctica para conectar tu ERP con agentes inteligentes y eliminar las tareas repetitivas.</p>
+        <a href="#" class="blog-link">Leer más →</a>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-cat">Industria 4.0</div>
+        <h4>Transformación digital en PYMEs: por dónde empezar y qué automatizar primero</h4>
+        <p>La hoja de ruta para PYMEs industriales que quieren dar el salto a la automatización inteligente.</p>
+        <a href="#" class="blog-link">Leer más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACTO ==================== -->
+<section id="contacto" class="sec sec-dark">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="sec-tag">CONTACTO</span>
+        <h2 class="sec-h2">¿Listo para <span class="grad-text">automatizar?</span></h2>
+        <p class="sec-sub-text">Cuéntanos qué proceso te está costando tiempo y dinero. En 30 minutos te mostramos cómo lo resolveríamos.</p>
+        <div class="contact-info">
+          <div class="ci-item">
+            <div class="ci-icon">✉️</div>
+            <div><div class="ci-label">Email</div><div class="ci-val">contacto@vektormkt.es</div></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">💬</div>
+            <div><div class="ci-label">WhatsApp</div><div class="ci-val">Respuesta inmediata</div></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🤖</div>
+            <div><div class="ci-label">AmaIA Chat</div><div class="ci-val">Disponible 24/7</div></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🕐</div>
+            <div><div class="ci-label">Horario</div><div class="ci-val">Lun–Vie · 9:00 – 20:00</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <div class="form-row-2">
+          <div class="form-group"><label>Nombre</label><input type="text" id="f-name" placeholder="Tu nombre" required/></div>
+          <div class="form-group"><label>Email</label><input type="email" id="f-email" placeholder="tu@empresa.com" required/></div>
+        </div>
+        <div class="form-group"><label>Empresa</label><input type="text" id="f-company" placeholder="Nombre de tu empresa"/></div>
+        <div class="form-group">
+          <label>¿Qué necesitas?</label>
+          <select id="f-service">
+            <option value="">Selecciona una opción...</option>
+            <option>Agente con IA (AmaIA)</option>
+            <option>Automatización de procesos</option>
+            <option>Plataforma interna / Dashboard</option>
+            <option>Integración de sistemas / ERP</option>
+            <option>Transformación digital completa</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Cuéntanos tu caso</label><textarea id="f-msg" rows="4" placeholder="Describe el proceso que quieres automatizar, qué sistemas usas y cuál es el problema actual..." required></textarea></div>
+        <button class="btn-submit" id="submit-btn"><span id="btn-text">Solicitar demostración gratuita →</span></button>
+        <p id="form-msg" class="form-msg"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="img/logo_sf.png" alt="Vektor MKT" style="height:38px;"/>
+        <p>Transformamos empresas con inteligencia artificial y automatización de procesos. Tu socio tecnológico para la industria del futuro.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </a>
+          <a href="https://wa.me/34000000000" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="mailto:contacto@vektormkt.es" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <a href="#servicios">IA Empresarial</a>
+        <a href="#servicios">Automatización</a>
+        <a href="#servicios">Plataformas</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#casos">Casos de uso</a>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#blog">Blog</a>
+        <a href="#blog">Guías</a>
+        <a href="#blog">Documentación</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo-sm">
+        <img src="img/logo_sf.png" alt="Vektor MKT" style="height:28px;"/>
+        <span>VEKTOR MKT</span>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Vektor MKT. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button class="chat-fab" id="chat-fab" aria-label="Abrir chat AmaIA">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  <span class="chat-fab-pulse"></span>
+</button>
+<div class="chat-widget" id="chat-widget">
+  <div class="cw-header">
+    <div class="cw-hinfo">
+      <div class="cw-avatar" style="background:#0d1520;padding:3px;"><img src="img/proyectos/amaia-logo.png" alt="AmaIA" style="width:30px;height:30px;object-fit:contain;border-radius:50%;"/></div>
+      <div>
+        <div class="cw-name">amaIA</div>
+        <div class="cw-status"><span class="online-dot"></span>En línea</div>
+      </div>
+    </div>
+    <button class="cw-close" id="cw-close">✕</button>
+  </div>
+  <div class="cw-msgs" id="cw-msgs">
+    <div class="cw-msg cw-msg-bot">
+      <div class="cw-msg-av" style="background:#0d1520;padding:2px;"><img src="img/proyectos/amaia-logo.png" alt="AmaIA" style="width:20px;height:20px;object-fit:contain;border-radius:50%;"/></div>
+      <div class="cw-bubble">👋 Hola, soy <strong>amaIA</strong>. ¿En qué puedo ayudarte hoy?</div>
+    </div>
+  </div>
+  <div class="cw-inp-row">
+    <input type="text" id="cw-input" placeholder="Escribe tu mensaje..."/>
+    <button id="cw-send" class="cw-send-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

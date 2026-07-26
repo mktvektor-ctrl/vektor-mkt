@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport = imprescindible para que la web sea responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VEKTOR · Diseño web que vende | Demo interactiva</title>
+  <meta name="description" content="Demo interactiva: compara en vivo los niveles Básico, Medio y Pro de nuestras webs. Diseño, IA y tienda online para tu negocio.">
+
+  <!-- Tipografía Inter desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo (en orden: variables → base → componentes → niveles) -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/tiers.css">
+</head>
+
+<!-- La clase tier-* la gestiona js/tierSwitcher.js -->
+<body class="tier-basico">
+
+  <!-- ================= SELECTOR DE NIVEL =================
+       Barra flotante para cambiar entre Básico/Medio/Pro.
+       Es el elemento estrella de la demo comercial.        -->
+  <div class="tier-switcher" role="group" aria-label="Selector de nivel de diseño">
+    <span class="hint">👇 Compara los tres niveles en vivo</span>
+    <button class="tier-btn" data-tier="basico">Básico</button>
+    <button class="tier-btn" data-tier="medio">Medio</button>
+    <button class="tier-btn" data-tier="pro">Pro</button>
+  </div>
+
+  <!-- ================= HEADER / NAVEGACIÓN ================= -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#hero" class="logo" aria-label="Inicio"></a>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <nav aria-label="Navegación principal">
+        <ul id="nav-links" class="nav-links"><!-- render.js --></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero">
+      <!-- Imagen de fondo (se revela a pantalla completa en nivel Pro) -->
+      <div class="hero-bg" aria-hidden="true">
+        <img id="hero-bg-img" src="" alt="">
+        <div class="hero-bg-overlay"></div>
+      </div>
+      <!-- Lienzo de partículas: solo se activa en nivel Pro -->
+      <canvas id="particles" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <span id="hero-eyebrow" class="eyebrow"></span>
+        <h1>
+          <span id="hero-title-text"></span><span id="hero-cursor" class="type-cursor" style="display:none">|</span>
+        </h1>
+        <p id="hero-subtitle" class="subtitle"></p>
+        <div class="hero-actions">
+          <a href="#contacto" id="hero-cta-1" class="btn"></a>
+          <a href="#planes" id="hero-cta-2" class="btn secondary needs-medio"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Qué hacemos</span>
+          <h2>Servicios pensados para vender</h2>
+          <p class="needs-medio">Cada pieza de tu presencia digital, trabajando en la misma dirección.</p>
+        </div>
+        <div id="services-grid" class="grid grid-4"><!-- render.js --></div>
+      </div>
+    </section>
+
+    <!-- ================= FRANJA DE ESTADÍSTICAS =================
+         En el nivel Pro se vuelve azul noche con contadores
+         animados: el momento "wow" del scroll.               -->
+    <div class="stats-band needs-medio">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:32px">
+          <span class="eyebrow">Resultados</span>
+        </div>
+        <div id="stats-grid" class="grid grid-4"><!-- render.js --></div>
+      </div>
+    </div>
+
+    <!-- ================= GALERÍA DE TRABAJOS (solo Medio y Pro) =================
+         Marcos de navegador con ejemplos de webs. Es la sección que
+         más "vende" en una agencia de diseño: el cliente ve resultados. -->
+    <section id="trabajos" class="needs-medio">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Portfolio</span>
+          <h2>Webs que ya están vendiendo</h2>
+          <p>Una muestra de proyectos. Cada negocio, su propia identidad.</p>
+        </div>
+        <div id="portfolio-grid" class="grid grid-2"><!-- render.js --></div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESO ================= -->
+    <section id="proceso">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2>De la idea al lanzamiento en 4 pasos</h2>
+        </div>
+        <div id="process-grid" class="grid grid-4"><!-- render.js --></div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIOS (solo Medio y Pro) ================= -->
+    <section id="testimonios" class="needs-medio">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Clientes</span>
+          <h2>Lo que dicen de nosotros</h2>
+        </div>
+        <div id="testimonials-grid" class="grid grid-3"><!-- render.js --></div>
+      </div>
+    </section>
+
+    <!-- ================= PLANES Y PRECIOS ================= -->
+    <section id="planes">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Planes</span>
+          <h2>Un plan para cada momento de tu negocio</h2>
+          <p>Precio cerrado, sin sorpresas. Y siempre sabes qué incluye tu cuota mensual.</p>
+        </div>
+        <div id="plans-grid" class="grid grid-3"><!-- render.js --></div>
+        <p id="plans-note" class="plans-note"><!-- render.js --></p>
+      </div>
+    </section>
+
+    <!-- ================= ADD-ONS + CALCULADORA ================= -->
+    <section id="addons">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Complementos</span>
+          <h2>Potencia tu web con extras</h2>
+          <p>Añádelos a cualquier plan, ahora o más adelante.</p>
+        </div>
+
+        <div id="addons-grid" class="grid grid-2"><!-- render.js --></div>
+
+        <!-- Calculadora de presupuesto en vivo (solo Medio y Pro,
+             para mostrar la diferencia de funcionalidades) -->
+        <div class="calculator needs-medio">
+          <h3>🧮 Calcula tu presupuesto</h3>
+
+          <p class="text-center" style="font-size:.85rem;color:var(--text-soft);margin-bottom:14px">1. Elige tu plan</p>
+          <div id="calc-plans" class="calc-row"><!-- render.js --></div>
+
+          <p class="text-center" style="font-size:.85rem;color:var(--text-soft);margin-bottom:14px">2. Añade complementos (opcional)</p>
+          <div id="calc-addons" class="calc-row"><!-- render.js --></div>
+
+          <div class="calc-total">
+            <div><span id="calc-setup" class="big">0 €</span> <span style="font-size:.85rem">pago único</span></div>
+            <div id="calc-monthly" class="monthly">+ 0 €/mes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AMAIA (chat de demostración) ================= -->
+    <section id="amaia">
+      <div class="container">
+        <div class="amaia-wrap">
+
+          <!-- Columna izquierda: texto de venta -->
+          <div class="amaia-info">
+            <span class="eyebrow">Inteligencia artificial</span>
+            <h2 id="amaia-title"></h2>
+            <p id="amaia-subtitle"></p>
+            <p id="amaia-pitch" class="amaia-pitch"></p>
+          </div>
+
+          <!-- Columna derecha: ventana de chat simulada -->
+          <div class="chat-window reveal">
+            <div class="chat-header">
+              <div class="avatar" aria-hidden="true">🤖</div>
+              <div>
+                <div id="chat-name" class="name"></div>
+                <div class="status">● En línea · Responde al instante</div>
+              </div>
+            </div>
+            <div id="chat-messages" class="chat-messages" aria-live="polite"><!-- chatbot.js --></div>
+            <div id="chat-questions" class="chat-questions"><!-- render.js --></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Contacto</span>
+          <h2 id="contact-title"></h2>
+          <p id="contact-subtitle"></p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="email" name="email" placeholder="Tu email" required>
+          <input type="text" name="empresa" placeholder="Tu empresa (opcional)">
+          <textarea name="mensaje" placeholder="Cuéntanos tu proyecto…" required></textarea>
+          <button type="submit" id="contact-btn" class="btn"></button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <p id="footer-text"></p>
+    <p id="footer-sub" class="sub"></p>
+  </footer>
+
+  <!-- ================= SCRIPTS =================
+       El orden importa:
+       1. content.js  → los datos
+       2. render.js   → pinta el contenido
+       3. resto       → funcionalidades
+       4. main.js     → arranca todo                -->
+  <script src="data/content.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/tierSwitcher.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

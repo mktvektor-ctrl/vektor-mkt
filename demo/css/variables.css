@@ -1,0 +1,96 @@
+/* ============================================================
+   VARIABLES.CSS — El "ADN visual" de la web
+   ------------------------------------------------------------
+   Todos los colores, tipografías y medidas viven aquí.
+   Si un día quieres cambiar el azul de la marca, se cambia
+   en UNA línea y se actualiza toda la web.
+
+   Cómo funciona el sistema de niveles:
+   El <body> lleva una clase: tier-basico, tier-medio o tier-pro.
+   Cada nivel redefine las mismas variables, así el resto del
+   CSS no necesita saber en qué nivel está.
+   ============================================================ */
+
+:root {
+  /* ----- Colores de marca (no cambian entre niveles) ----- */
+  --brand-blue:  #2563eb;   /* azul principal */
+  --brand-cyan:  #06b6d4;   /* cian de acento */
+  --brand-dark:  #0c1226;   /* azul noche (franja oscura del Pro) */
+  --brand-grad:  linear-gradient(90deg, var(--brand-blue), var(--brand-cyan));
+
+  /* ----- Tipografía ----- */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-basic: Georgia, 'Times New Roman', serif;  /* solo la usa el nivel Básico */
+
+  /* ----- Medidas y ritmo ----- */
+  --container: 1120px;      /* ancho máximo del contenido */
+  --radius: 14px;           /* redondeo de tarjetas */
+  --section-pad: clamp(56px, 9vw, 110px);  /* espaciado vertical de secciones (responsive) */
+
+  /* ----- Transición al cambiar de nivel ----- */
+  --tier-transition: background-color .5s ease, color .5s ease, border-color .5s ease, box-shadow .5s ease;
+}
+
+/* ============================================================
+   NIVEL BÁSICO — deliberadamente simple y plano
+   (representa lo que entrega la competencia barata)
+   ============================================================ */
+body.tier-basico {
+  --bg-page:      #f4f4f2;
+  --bg-section:   #ffffff;
+  --bg-card:      #fafafa;
+  --bg-band:      #e9e9e6;          /* la "franja de stats" en básico es gris plano */
+  --text-main:    #2b2b2b;
+  --text-soft:    #6f6f6f;
+  --text-band:    #2b2b2b;
+  --accent:       #555555;          /* sin color de marca: gris */
+  --accent-soft:  #e0e0e0;
+  --border-card:  #d9d9d6;
+  --btn-bg:       #dcdcdc;
+  --btn-text:     #333333;
+  --btn-radius:   2px;              /* botones casi cuadrados = look anticuado */
+  --card-shadow:  none;
+  --font-body:    var(--font-basic);
+}
+
+/* ============================================================
+   NIVEL MEDIO — profesional, claro, con color de marca
+   ============================================================ */
+body.tier-medio {
+  --bg-page:      #f7f9ff;
+  --bg-section:   #ffffff;
+  --bg-card:      #ffffff;
+  --bg-band:      #eef3ff;          /* franja de stats: azul muy claro */
+  --text-main:    #12204d;
+  --text-soft:    #5a6a8a;
+  --text-band:    #12204d;
+  --accent:       var(--brand-blue);
+  --accent-soft:  #e3ebfc;
+  --border-card:  #e5e9f5;
+  --btn-bg:       var(--brand-blue);
+  --btn-text:     #ffffff;
+  --btn-radius:   10px;
+  --card-shadow:  0 4px 16px rgba(18, 32, 77, .06);
+  --font-body:    var(--font-main);
+}
+
+/* ============================================================
+   NIVEL PRO — híbrido premium: base clara + franja oscura
+   ============================================================ */
+body.tier-pro {
+  --bg-page:      #f5f7ff;
+  --bg-section:   #ffffff;
+  --bg-card:      rgba(255, 255, 255, .78);  /* tarjetas "de cristal" */
+  --bg-band:      var(--brand-dark);          /* franja de stats: azul noche */
+  --text-main:    #0f1b3d;
+  --text-soft:    #5a6a8a;
+  --text-band:    #ffffff;
+  --accent:       var(--brand-blue);
+  --accent-soft:  #e3ebfc;
+  --border-card:  rgba(37, 99, 235, .14);
+  --btn-bg:       var(--brand-grad);          /* botón con gradiente */
+  --btn-text:     #ffffff;
+  --btn-radius:   12px;
+  --card-shadow:  0 10px 30px rgba(15, 27, 61, .08);
+  --font-body:    var(--font-main);
+}

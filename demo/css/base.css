@@ -1,0 +1,128 @@
+/* ============================================================
+   BASE.CSS — Cimientos de la web
+   ------------------------------------------------------------
+   Reset, tipografía general, contenedores y utilidades.
+   Aquí NO hay estilos de componentes concretos (eso está en
+   components.css) ni diferencias entre niveles (tiers.css).
+   ============================================================ */
+
+/* ----- Reset mínimo ----- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;          /* scroll suave al navegar por anclas */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  transition: var(--tier-transition);
+  overflow-x: hidden;               /* evita scroll horizontal por animaciones */
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ----- Contenedor central ----- */
+.container {
+  width: min(var(--container), 92%);
+  margin-inline: auto;
+}
+
+/* ----- Secciones ----- */
+section {
+  padding-block: var(--section-pad);
+  background: var(--bg-section);
+  transition: var(--tier-transition);
+}
+
+/* Título + subtítulo de cada sección */
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.section-head h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+/* Etiqueta pequeña sobre los títulos (eyebrow) */
+.eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* ----- Utilidades ----- */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Grids que se adaptan solos al ancho disponible */
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.text-center { text-align: center; }
+
+/* Solo visible para lectores de pantalla (accesibilidad) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ----- Accesibilidad: foco visible con teclado ----- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--brand-cyan);
+  outline-offset: 2px;
+}
+
+/* ----- Accesibilidad: respetar "reducir movimiento" -----
+   Si el usuario tiene activada esta opción en su sistema,
+   desactivamos todas las animaciones de la web.            */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----- Responsive general ----- */
+@media (max-width: 640px) {
+  .section-head { margin-bottom: 32px; }
+}

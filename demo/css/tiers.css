@@ -1,0 +1,239 @@
+/* ============================================================
+   TIERS.CSS — Diferencias visibles entre niveles
+   ------------------------------------------------------------
+   Los COLORES por nivel están en variables.css.
+   Aquí definimos lo demás: qué secciones existen en cada plan,
+   qué animaciones se activan y los efectos especiales del Pro.
+
+   Regla de oro del sistema:
+   body.tier-basico / body.tier-medio / body.tier-pro
+   ============================================================ */
+
+
+/* ============================================================
+   VISIBILIDAD DE SECCIONES POR NIVEL
+   ------------------------------------------------------------
+   El plan Básico incluye menos secciones (así el cliente VE
+   la diferencia de contenido, no solo de estilo).
+   ============================================================ */
+
+/* Elementos que requieren nivel Medio o superior */
+body.tier-basico .needs-medio { display: none; }
+
+/* Elementos que requieren nivel Pro */
+body.tier-basico .needs-pro,
+body.tier-medio  .needs-pro { display: none; }
+
+
+/* ============================================================
+   ANIMACIONES DE SCROLL (aparecer al hacer scroll)
+   ------------------------------------------------------------
+   JS añade la clase .revealed cuando el elemento entra en
+   pantalla. Solo Medio y Pro tienen esta animación; en Básico
+   todo aparece de golpe (estático).
+   ============================================================ */
+
+body.tier-medio .reveal,
+body.tier-pro   .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+body.tier-medio .reveal.revealed,
+body.tier-pro   .reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* En Básico los elementos .reveal se ven siempre (sin animación) */
+body.tier-basico .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* ============================================================
+   EFECTOS HOVER POR NIVEL
+   ============================================================ */
+
+/* Medio: las tarjetas se elevan suavemente */
+body.tier-medio .service-card:hover,
+body.tier-medio .plan-card:hover:not(.highlight),
+body.tier-medio .testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(18, 32, 77, .1);
+}
+
+/* Pro: elevación + escala + borde iluminado (más dramático) */
+body.tier-pro .service-card:hover,
+body.tier-pro .testimonial:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--brand-cyan);
+  box-shadow: 0 16px 36px rgba(37, 99, 235, .16);
+}
+
+body.tier-pro .plan-card:hover:not(.highlight) {
+  transform: translateY(-6px);
+  border-color: var(--brand-cyan);
+}
+
+/* Pro: los botones principales crecen al pasar el ratón */
+body.tier-pro .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 26px rgba(37, 99, 235, .35);
+}
+
+/* Básico: nada se mueve (ni hover ni animaciones) */
+body.tier-basico .service-card:hover,
+body.tier-basico .plan-card:hover,
+body.tier-basico .testimonial:hover,
+body.tier-basico .btn:hover {
+  transform: none;
+}
+
+
+/* ============================================================
+   EXTRAS EXCLUSIVOS DEL NIVEL PRO
+   ============================================================ */
+
+/* Tarjetas "de cristal" (glassmorphism) */
+body.tier-pro .service-card,
+body.tier-pro .plan-card,
+body.tier-pro .testimonial,
+body.tier-pro .addon-card,
+body.tier-pro .calculator {
+  backdrop-filter: blur(10px);
+}
+
+/* El hero del Pro lleva un gradiente de fondo muy sutil */
+body.tier-pro .hero {
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(37, 99, 235, .08), transparent 55%),
+    radial-gradient(ellipse at 80% 90%, rgba(6, 182, 212, .08), transparent 55%),
+    var(--bg-section);
+}
+
+/* La badge/eyebrow del hero Pro lleva borde tipo "pill" luminoso */
+body.tier-pro .hero .eyebrow {
+  border: 1px solid rgba(37, 99, 235, .3);
+  padding: 6px 18px;
+  border-radius: 999px;
+}
+
+/* El eyebrow de la franja oscura debe verse en cian */
+body.tier-pro .stats-band .eyebrow { color: var(--brand-cyan); }
+
+
+/* ============================================================
+   RETOQUES DEL NIVEL BÁSICO (look deliberadamente plano)
+   ============================================================ */
+
+/* Sin eyebrows decorativos en básico: se ocultan */
+body.tier-basico .eyebrow { display: none; }
+
+/* Los títulos del básico son más pequeños y sobrios */
+body.tier-basico .hero h1 {
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  font-weight: 700;
+}
+
+body.tier-basico .section-head h2 { font-weight: 600; }
+
+
+/* ============================================================
+   TRATAMIENTO DE IMÁGENES POR NIVEL
+   ------------------------------------------------------------
+   Esta es la parte que crea el "salto" visual entre planes.
+   ============================================================ */
+
+/* ---------- BÁSICO: imágenes en gris, hero sin foto ---------- */
+/* Las fotos de servicios se ven en blanco y negro y apagadas:
+   refuerza la sensación de web anticuada y sin vida. */
+body.tier-basico .service-img img {
+  filter: grayscale(100%) contrast(.9);
+  opacity: .85;
+}
+/* El icono flotante en básico es plano, sin sombra */
+body.tier-basico .service-icon {
+  background: #e8e8e6;
+  box-shadow: none;
+  border-radius: 2px;
+}
+/* En básico el hero NO muestra imagen de fondo (fondo plano) */
+body.tier-basico .hero-bg { opacity: 0; }
+
+
+/* ---------- MEDIO: imágenes a todo color ---------- */
+body.tier-medio .service-img img { filter: none; opacity: 1; }
+/* El hero del medio sigue siendo claro y limpio, sin foto de fondo */
+body.tier-medio .hero-bg { opacity: 0; }
+
+
+/* ---------- PRO: hero cinematográfico + imágenes vivas ---------- */
+/* La imagen de fondo del hero se revela a pantalla completa */
+body.tier-pro .hero-bg { opacity: 1; }
+
+/* El texto del hero pasa a blanco para leerse sobre la foto */
+body.tier-pro .hero h1,
+body.tier-pro .hero .subtitle { color: #fff; }
+
+body.tier-pro .hero .subtitle { color: rgba(255, 255, 255, .85); }
+
+/* La imagen de fondo hace un zoom lento infinito (efecto vivo) */
+body.tier-pro .hero-bg img {
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.12); }
+}
+
+/* Imágenes de servicios a todo color con zoom al pasar el ratón */
+body.tier-pro .service-img img { filter: none; opacity: 1; }
+body.tier-pro .service-card:hover .service-img img { transform: scale(1.08); }
+
+/* Galería: al pasar el ratón, el marco se eleva y la captura
+   hace un "scroll" lento, como si recorrieras la web real */
+body.tier-pro .work-card:hover .browser {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(15, 27, 61, .22);
+}
+body.tier-pro .work-card:hover .browser-shot img {
+  transform: translateY(-25%);
+}
+
+/* En Medio la galería también reacciona, pero más sobria */
+body.tier-medio .work-card:hover .browser {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(15, 27, 61, .16);
+}
+
+
+/* ============================================================
+   AJUSTE RESPONSIVE DEL HERO PRO
+   ------------------------------------------------------------
+   En el nivel Pro, como el hero lleva foto de fondo oscura,
+   le damos algo más de altura para que respire.
+   ============================================================ */
+body.tier-pro .hero {
+  padding-block: calc(var(--section-pad) * 1.4);
+}
+
+
+/* ---------- Retoques de legibilidad del hero Pro ---------- */
+/* El eyebrow (etiqueta pequeña) en cian claro sobre la foto */
+body.tier-pro .hero .eyebrow {
+  color: var(--brand-cyan);
+  border-color: rgba(6, 182, 212, .5);
+  background: rgba(6, 182, 212, .08);
+}
+
+/* El botón secundario del hero, en blanco para contrastar con la foto */
+body.tier-pro .hero .btn.secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .6);
+}
+body.tier-pro .hero .btn.secondary:hover {
+  background: rgba(255, 255, 255, .12);
+}
