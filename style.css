@@ -915,6 +915,18 @@ ul{list-style:none;}
   display:flex;align-items:center;justify-content:center;
   color:white;flex-shrink:0;
 }
+.cw-wa-row{
+  padding:.5rem 1rem .75rem;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.cw-wa-btn{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  width:100%;padding:9px 0;border-radius:8px;
+  background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.3);
+  color:#25d366;font-size:12.5px;font-weight:600;
+  text-decoration:none;transition:background .2s,border-color .2s;
+}
+.cw-wa-btn:hover{background:rgba(37,211,102,.22);border-color:rgba(37,211,102,.5);}
 
 /* ============================================================
    RESPONSIVE
