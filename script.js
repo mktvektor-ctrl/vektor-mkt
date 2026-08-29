@@ -12,19 +12,16 @@ let mx = 0, my = 0, rx = 0, ry = 0;
 
 document.addEventListener('mousemove', e => {
   mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx - 4 + 'px';
-  cursor.style.top  = my - 4 + 'px';
+  cursor.style.transform = `translate3d(${mx - 4}px,${my - 4}px,0)`;
   if (mouseGlow) {
-    mouseGlow.style.left = mx + 'px';
-    mouseGlow.style.top  = my + 'px';
+    mouseGlow.style.transform = `translate3d(${mx - 200}px,${my - 200}px,0)`;
   }
 });
 
 (function animRing() {
-  rx += (mx - rx) * .12;
-  ry += (my - ry) * .12;
-  cursorRing.style.left = rx - 18 + 'px';
-  cursorRing.style.top  = ry - 18 + 'px';
+  rx += (mx - rx) * .22;
+  ry += (my - ry) * .22;
+  cursorRing.style.transform = `translate3d(${rx - 18}px,${ry - 18}px,0)`;
   requestAnimationFrame(animRing);
 })();
 
