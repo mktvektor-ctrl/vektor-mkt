@@ -1,0 +1,342 @@
+<title>Política de Privacidad — VektorMKT</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap">
+<style>
+  :root {
+    --bg: #F8F7F5;
+    --bg-2: #EEECEA;
+    --text: #1A1A1A;
+    --text-muted: #5A5A5A;
+    --accent: #1E3A5F;
+    --accent-light: #2E5286;
+    --border: #D8D5D0;
+    --tag-bg: #E8EDF3;
+    --tag-text: #1E3A5F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1923;
+      --bg-2: #172030;
+      --text: #E8E6E1;
+      --text-muted: #8A8A8A;
+      --accent: #5B8EC4;
+      --accent-light: #7AAEE0;
+      --border: #2A3545;
+      --tag-bg: #1A2C40;
+      --tag-text: #7AAEE0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1923;
+    --bg-2: #172030;
+    --text: #E8E6E1;
+    --text-muted: #8A8A8A;
+    --accent: #5B8EC4;
+    --accent-light: #7AAEE0;
+    --border: #2A3545;
+    --tag-bg: #1A2C40;
+    --tag-text: #7AAEE0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.75;
+    padding: 0 1.5rem;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 0 6rem;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  .logo span {
+    color: var(--accent-light);
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--text);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin-bottom: 1rem;
+  }
+
+  .meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+  }
+
+  .date {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .toc {
+    background: var(--bg-2);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .toc-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .toc ol {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .toc a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .toc a:hover { text-decoration: underline; }
+
+  section {
+    margin-bottom: 2.75rem;
+  }
+
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  p {
+    color: var(--text);
+    margin-bottom: 0.85rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  li { color: var(--text); }
+
+  a {
+    color: var(--accent-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .contact-box {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    margin-top: 1rem;
+  }
+
+  .contact-box p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+</style>
+
+<div class="page">
+  <header>
+    <a class="logo" href="https://vektormkt.es">Vektor<span>MKT</span></a>
+    <h1>Política de Privacidad</h1>
+    <div class="meta">
+      <span class="tag">Versión 1.0</span>
+      <span class="date">Última actualización: agosto 2026</span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Índice">
+    <div class="toc-title">Índice</div>
+    <ol>
+      <li><a href="#responsable">Responsable del tratamiento</a></li>
+      <li><a href="#datos">Datos que recopilamos</a></li>
+      <li><a href="#finalidad">Finalidad del tratamiento</a></li>
+      <li><a href="#base">Base legal</a></li>
+      <li><a href="#whatsapp">Uso del agente de WhatsApp (AmaIA)</a></li>
+      <li><a href="#conservacion">Conservación de los datos</a></li>
+      <li><a href="#derechos">Tus derechos</a></li>
+      <li><a href="#seguridad">Seguridad</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <section id="responsable">
+    <h2>1. Responsable del tratamiento</h2>
+    <p>El responsable del tratamiento de los datos personales recogidos a través de este sitio web y de los servicios de VektorMKT es:</p>
+    <div class="contact-box">
+      <p><strong>VektorMKT</strong></p>
+      <p>Sitio web: <a href="https://vektormkt.es">vektormkt.es</a></p>
+      <p>Correo electrónico: <a href="mailto:hola@vektormkt.es">hola@vektormkt.es</a></p>
+    </div>
+  </section>
+
+  <section id="datos">
+    <h2>2. Datos que recopilamos</h2>
+    <p>En función del canal de contacto utilizado, podemos recopilar los siguientes datos:</p>
+    <ul>
+      <li><strong>Formularios de contacto y correo electrónico:</strong> nombre, dirección de correo electrónico y el contenido del mensaje.</li>
+      <li><strong>WhatsApp (agente AmaIA):</strong> número de teléfono, nombre de perfil de WhatsApp y el contenido de los mensajes intercambiados.</li>
+      <li><strong>Google Calendar:</strong> nombre, correo electrónico y los detalles de la cita concertada, cuando el usuario solicita una reunión o llamada.</li>
+      <li><strong>Navegación web:</strong> datos técnicos anónimos como dirección IP, navegador y páginas visitadas, a través de herramientas de análisis.</li>
+    </ul>
+  </section>
+
+  <section id="finalidad">
+    <h2>3. Finalidad del tratamiento</h2>
+    <p>Los datos recogidos se utilizan exclusivamente para:</p>
+    <ul>
+      <li>Responder a consultas y solicitudes de información sobre los servicios de VektorMKT.</li>
+      <li>Gestionar la agenda de reuniones y llamadas de discovery.</li>
+      <li>Proporcionar asistencia a través del agente conversacional de WhatsApp.</li>
+      <li>Enviar información comercial cuando el usuario lo haya solicitado expresamente.</li>
+      <li>Mejorar la calidad del servicio y la experiencia del usuario.</li>
+    </ul>
+  </section>
+
+  <section id="base">
+    <h2>4. Base legal</h2>
+    <p>El tratamiento de los datos se basa en:</p>
+    <ul>
+      <li><strong>Consentimiento del interesado,</strong> cuando el usuario inicia una conversación, completa un formulario o solicita información.</li>
+      <li><strong>Interés legítimo,</strong> para la mejora de los servicios y la atención al cliente.</li>
+      <li><strong>Ejecución de un precontrato o contrato,</strong> cuando se gestionan citas y propuestas comerciales.</li>
+    </ul>
+  </section>
+
+  <section id="whatsapp">
+    <h2>5. Uso del agente de WhatsApp (AmaIA)</h2>
+    <p>VektorMKT utiliza un agente conversacional llamado <strong>AmaIA</strong> que opera a través de la API de WhatsApp Business de Meta. Al interactuar con este agente, el usuario acepta que:</p>
+    <ul>
+      <li>Los mensajes son procesados por la API de WhatsApp (Meta Platforms, Inc.) y por la API de Claude (Anthropic, PBC) para generar respuestas automáticas.</li>
+      <li>Los datos de la conversación pueden almacenarse temporalmente para dar continuidad al diálogo.</li>
+      <li>Si el usuario solicita una cita, los datos necesarios se registran en Google Calendar mediante la API de Google.</li>
+    </ul>
+    <p>El usuario puede detener la conversación en cualquier momento sin consecuencias. Para solicitar la eliminación del historial, puede contactarnos en la dirección indicada en la sección de contacto.</p>
+  </section>
+
+  <section id="conservacion">
+    <h2>6. Conservación de los datos</h2>
+    <p>Los datos personales se conservan únicamente durante el tiempo necesario para la finalidad para la que fueron recogidos, y como máximo:</p>
+    <ul>
+      <li><strong>Conversaciones de WhatsApp:</strong> hasta 90 días desde el último mensaje.</li>
+      <li><strong>Citas en calendario:</strong> hasta 12 meses después de la fecha de la reunión.</li>
+      <li><strong>Solicitudes de información:</strong> hasta 2 años desde la última comunicación.</li>
+    </ul>
+    <p>Una vez transcurrido ese período, los datos se eliminan de forma segura.</p>
+  </section>
+
+  <section id="derechos">
+    <h2>7. Tus derechos</h2>
+    <p>De acuerdo con el Reglamento General de Protección de Datos (RGPD), el usuario tiene derecho a:</p>
+    <ul>
+      <li><strong>Acceso:</strong> conocer qué datos personales tratamos sobre usted.</li>
+      <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+      <li><strong>Supresión:</strong> solicitar la eliminación de sus datos cuando ya no sean necesarios.</li>
+      <li><strong>Oposición:</strong> oponerse al tratamiento de sus datos en determinadas circunstancias.</li>
+      <li><strong>Portabilidad:</strong> recibir sus datos en un formato estructurado y de uso común.</li>
+      <li><strong>Limitación:</strong> solicitar la restricción del tratamiento en ciertos casos.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, puede contactarnos a través de <a href="mailto:hola@vektormkt.es">hola@vektormkt.es</a>. También tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> en <a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>.</p>
+  </section>
+
+  <section id="seguridad">
+    <h2>8. Seguridad</h2>
+    <p>VektorMKT aplica medidas técnicas y organizativas adecuadas para proteger los datos personales frente a accesos no autorizados, pérdida, destrucción o divulgación accidental. Los datos transmitidos a través de WhatsApp y Google Calendar están protegidos por los mecanismos de seguridad de Meta y Google respectivamente.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>9. Contacto</h2>
+    <p>Para cualquier consulta relacionada con esta política de privacidad o con el tratamiento de sus datos personales, puede contactarnos a través de:</p>
+    <div class="contact-box">
+      <p>📧 <a href="mailto:hola@vektormkt.es">hola@vektormkt.es</a></p>
+      <p>🌐 <a href="https://vektormkt.es">vektormkt.es</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 VektorMKT · <a href="https://vektormkt.es">vektormkt.es</a></p>
+    <p style="margin-top:0.4rem;">Esta política puede actualizarse periódicamente. La versión vigente siempre estará disponible en esta página.</p>
+  </footer>
+</div>
