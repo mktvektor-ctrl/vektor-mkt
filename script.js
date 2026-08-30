@@ -291,6 +291,10 @@ const cwMsgs     = document.getElementById('cw-msgs');
 chatFab.addEventListener('click', () => chatWidget.classList.toggle('open'));
 cwClose.addEventListener('click', () => chatWidget.classList.remove('open'));
 
+function escapeHTML(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
 function appendMsg(text, isBot) {
   const div = document.createElement('div');
   div.className = 'cw-msg' + (isBot ? ' cw-msg-bot' : ' cw-msg-user');
@@ -335,7 +339,7 @@ async function sendChat() {
   // Append user message
   const userDiv = document.createElement('div');
   userDiv.className = 'cw-msg cw-msg-user';
-  userDiv.innerHTML = `<div class="cw-bubble">${msg}</div>`;
+  userDiv.innerHTML = `<div class="cw-bubble">${escapeHTML(msg)}</div>`;
   cwMsgs.appendChild(userDiv);
   cwMsgs.scrollTop = cwMsgs.scrollHeight;
 
@@ -364,7 +368,7 @@ async function sendChat() {
 
     const botDiv = document.createElement('div');
     botDiv.className = 'cw-msg cw-msg-bot';
-    botDiv.innerHTML = `<div class="cw-msg-av" style="background:#0d1520;padding:2px;"><img src="img/proyectos/amaia-logo.png" alt="AmaIA" style="width:20px;height:20px;object-fit:contain;border-radius:50%;"/></div><div class="cw-bubble">${reply.replace(/\n/g,'<br/>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')}</div>`;
+    botDiv.innerHTML = `<div class="cw-msg-av" style="background:#0d1520;padding:2px;"><img src="img/proyectos/amaia-logo.png" alt="AmaIA" style="width:20px;height:20px;object-fit:contain;border-radius:50%;"/></div><div class="cw-bubble">${escapeHTML(reply).replace(/\n/g,'<br/>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')}</div>`;
     cwMsgs.appendChild(botDiv);
     amaiaHistory.push({ role: 'assistant', content: reply });
 
