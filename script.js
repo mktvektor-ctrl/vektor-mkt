@@ -57,6 +57,19 @@ window.addEventListener('scroll', () => {
   });
 });
 
+/* ---------- ACTIVE NAV BASED ON CURRENT PAGE ---------- */
+(function setActiveNav() {
+  const page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  document.querySelectorAll('.nav-link').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('#')[0].toLowerCase();
+    if (href && (href === page || (page === 'index.html' && (href === 'index.html' || href === '')))) {
+      a.classList.add('active');
+    } else if (href && href !== '' && href !== '#') {
+      a.classList.remove('active');
+    }
+  });
+})();
+
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   const spans = navToggle.querySelectorAll('span');
@@ -82,14 +95,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ---------- PARTICLE CANVAS ---------- */
 const canvas = document.getElementById('particle-canvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas ? canvas.getContext('2d') : null;
 
 function resizeCanvas() {
+  if (!canvas) return;
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+if (canvas) {
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+}
 
 const COLORS = [
   'rgba(6,182,212,',
@@ -98,7 +114,7 @@ const COLORS = [
   'rgba(236,72,153,'
 ];
 
-const particles = Array.from({ length: 90 }, () => ({
+const particles = canvas ? Array.from({ length: 90 }, () => ({
   x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
   vx: (Math.random() - .5) * .35,
@@ -106,9 +122,10 @@ const particles = Array.from({ length: 90 }, () => ({
   r: Math.random() * 1.5 + .4,
   color: COLORS[Math.floor(Math.random() * COLORS.length)],
   alpha: Math.random() * .4 + .15
-}));
+})) : [];
 
 function drawParticles() {
+  if (!canvas || !ctx) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach(p => {
@@ -139,7 +156,7 @@ function drawParticles() {
   }
   requestAnimationFrame(drawParticles);
 }
-drawParticles();
+if (canvas && ctx) drawParticles();
 
 /* ---------- NEURAL SVG HERO ---------- */
 (function buildNeural() {
