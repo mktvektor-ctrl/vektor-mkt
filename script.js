@@ -19,8 +19,8 @@ document.addEventListener('mousemove', e => {
 });
 
 (function animRing() {
-  rx += (mx - rx) * .22;
-  ry += (my - ry) * .22;
+  rx += (mx - rx) * .42;
+  ry += (my - ry) * .42;
   cursorRing.style.transform = `translate3d(${rx - 18}px,${ry - 18}px,0)`;
   requestAnimationFrame(animRing);
 })();
