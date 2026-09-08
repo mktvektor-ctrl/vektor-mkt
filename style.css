@@ -1101,11 +1101,9 @@ ul{list-style:none;}
 }
 .promo-cta:hover{background:rgba(255,255,255,.35);}
 
-/* Push nav down to account for promo bar (~40px tall) */
-#navbar{top:40px !important;}
-
-/* Hero needs extra padding-top: promo bar (40px) + nav (~70px) = 110px */
-#hero{padding-top:110px !important;}
+/* Navbar at top, no promo bar */
+#navbar{top:0 !important;}
+#hero{padding-top:80px !important;}
 
 /* Nav logo — clean proportional sizing, no distortion */
 .nav-logo-img {
@@ -1537,6 +1535,7 @@ ul{list-style:none;}
 
 /* ---- HIDE CUSTOM CURSOR ON TOUCH / MOBILE DEVICES ---- */
 @media (hover: none), (pointer: coarse) {
-  #cursor, #cursor-ring, #mouse-glow { display: none !important; }
+  #cursor, #cursor-ring, #mouse-glow { display: none !important; visibility: hidden !important; }
   body { cursor: auto !important; }
 }
+
