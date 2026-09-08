@@ -1436,6 +1436,7 @@ ul{list-style:none;}
   width: auto;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(6,182,212,.3));
 }
 .os-badge {
   display: inline-block;
@@ -1532,4 +1533,10 @@ ul{list-style:none;}
 #hero {
   min-height: 680px !important;
   max-height: 800px !important;
+}
+
+/* ---- HIDE CUSTOM CURSOR ON TOUCH / MOBILE DEVICES ---- */
+@media (hover: none), (pointer: coarse) {
+  #cursor, #cursor-ring, #mouse-glow { display: none !important; }
+  body { cursor: auto !important; }
 }
